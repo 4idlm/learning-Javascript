@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Taskes</title>
+</head>
+
+<body onload="">
+    <div>
+        <p id="test"></p>
+        <p id="defeat"></p>
+    </div>
+    <div>
+        <input type="text" id="going" value="posting" />
+        <button onClick="deelete()">delete</button>
+    </div>
+
+    <script>
+
+        var para = document.createElement("input");
+        para.setAttribute("type", "text");
+        para.setAttribute("value", "Hello World!");
+        var element = document.getElementById("test");
+        element.appendChild(para);
+
+
+
+
+        para.addEventListener("change", function () {
+            var newpara = document.createElement("p");
+            // var htop = document.getElementById("defeat");
+            var element = document.getElementById("test");
+            newpara.innerHTML = para.value;
+            element.appendChild(newpara);
+        });
+
+
+
+
+        function deelete() {
+
+            var removeelement = document.getElementById("going");
+            removeelement.value = ""
+
+        }
+
+
+    </script>
+</body>
+
+</html>
